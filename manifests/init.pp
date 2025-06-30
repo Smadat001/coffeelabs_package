@@ -11,6 +11,10 @@ class coffeelabs_package {
       provider => $provider,
     }
   } else {
-    fail('You must specify a package_name to install.')
+    notice('You must specify a package_name to install.')
+  }
+  file { 'C:/Temp/example.txt':
+    ensure  => 'file',
+    content => "This is a sample file managed by Puppet on Windows.\n",
   }
 }
