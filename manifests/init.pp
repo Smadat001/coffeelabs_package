@@ -14,7 +14,7 @@ class coffeelabs_package {
     notice('You must specify a package_name to install.')
   }
   file { 'C:/Temp/example.txt':
-    ensure  => 'file',
+    ensure  => 'absent',
     content => "This is a sample file managed by Puppet on Windows.\n",
   }
 }
